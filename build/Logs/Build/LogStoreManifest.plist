@@ -6,6 +6,48 @@
 	<integer>11</integer>
 	<key>logs</key>
 	<dict>
+		<key>E07CE26C-6DAC-46CF-9040-A5AF5C0389A8</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E07CE26C-6DAC-46CF-9040-A5AF5C0389A8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AutoClicker project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AutoClicker</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project AutoClicker with scheme AutoClicker and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>784281817.52337599</real>
+			<key>timeStoppedRecording</key>
+			<real>784281820.93056595</real>
+			<key>title</key>
+			<string>Building project AutoClicker with scheme AutoClicker and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>E07CE26C-6DAC-46CF-9040-A5AF5C0389A8</string>
+		</dict>
 		<key>FD93F4A1-11D7-4675-B99E-F348C29BDC31</key>
 		<dict>
 			<key>className</key>
