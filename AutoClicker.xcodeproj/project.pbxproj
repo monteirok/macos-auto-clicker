@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DCA40AF2EBF2E1100017551 /* ContentView 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCA40AE2EBF2E1100017551 /* ContentView 2.swift */; };
 		9DCA40B12EBF2F0700017551 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCA40B02EBF2F0700017551 /* RootView.swift */; };
+		9DCA40B32EBF3C4800017551 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCA40B22EBF3C4300017551 /* ContentView.swift */; };
 		B10000012000000100BEEF01 /* AutoClickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000002000000100BEEF01 /* AutoClickerApp.swift */; };
-		B10000032000000100BEEF01 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000022000000100BEEF01 /* ContentView.swift */; };
 		B10000052000000100BEEF01 /* ClickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000042000000100BEEF01 /* ClickerModel.swift */; };
 		B10000072000000100BEEF01 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000062000000100BEEF01 /* AccessibilityHelper.swift */; };
 		B10000092000000100BEEF01 /* OverlayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000082000000100BEEF01 /* OverlayPicker.swift */; };
@@ -18,10 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9DCA40AE2EBF2E1100017551 /* ContentView 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView 2.swift"; sourceTree = "<group>"; };
 		9DCA40B02EBF2F0700017551 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		9DCA40B22EBF3C4300017551 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B10000002000000100BEEF01 /* AutoClickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerApp.swift; sourceTree = "<group>"; };
-		B10000022000000100BEEF01 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B10000042000000100BEEF01 /* ClickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerModel.swift; sourceTree = "<group>"; };
 		B10000062000000100BEEF01 /* AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelper.swift; sourceTree = "<group>"; };
 		B10000082000000100BEEF01 /* OverlayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPicker.swift; sourceTree = "<group>"; };
@@ -60,14 +58,13 @@
 		B10000172000000100BEEF01 /* AutoClicker */ = {
 			isa = PBXGroup;
 			children = (
+				9DCA40B22EBF3C4300017551 /* ContentView.swift */,
 				B10000002000000100BEEF01 /* AutoClickerApp.swift */,
-				B10000022000000100BEEF01 /* ContentView.swift */,
 				B10000042000000100BEEF01 /* ClickerModel.swift */,
 				B10000062000000100BEEF01 /* AccessibilityHelper.swift */,
 				B10000082000000100BEEF01 /* OverlayPicker.swift */,
 				B100000A2000000100BEEF01 /* Assets.xcassets */,
 				B100000C2000000100BEEF01 /* Info.plist */,
-				9DCA40AE2EBF2E1100017551 /* ContentView 2.swift */,
 				9DCA40B02EBF2F0700017551 /* RootView.swift */,
 			);
 			path = AutoClicker;
@@ -101,7 +98,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					B10000142000000100BEEF01 = {
 						CreatedOnToolsVersion = 15.0;
@@ -115,6 +112,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B100000E2000000100BEEF01;
 			productRefGroup = B10000162000000100BEEF01 /* Products */;
@@ -142,9 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DCA40AF2EBF2E1100017551 /* ContentView 2.swift in Sources */,
 				B10000012000000100BEEF01 /* AutoClickerApp.swift in Sources */,
-				B10000032000000100BEEF01 /* ContentView.swift in Sources */,
+				9DCA40B32EBF3C4800017551 /* ContentView.swift in Sources */,
 				B10000052000000100BEEF01 /* ClickerModel.swift in Sources */,
 				9DCA40B12EBF2F0700017551 /* RootView.swift in Sources */,
 				B10000072000000100BEEF01 /* AccessibilityHelper.swift in Sources */,
@@ -193,6 +190,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -211,6 +209,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -255,6 +254,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -266,6 +266,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 5.0;
 			};

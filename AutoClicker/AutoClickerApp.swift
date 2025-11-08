@@ -9,6 +9,36 @@ struct AutoClickerApp: App {
             RootView()
                 .environmentObject(model)
         }
+        .commands {
+            CommandMenu("Controls") {
+                Button("Start") { model.start() }
+                    .keyboardShortcut(.return, modifiers: [])
+
+                Button(model.isPaused ? "Resume" : "Pause") { model.togglePauseResume() }
+                    .keyboardShortcut(.space, modifiers: [])
+                    .disabled(!model.isRunning)
+
+                Button("Stop") { model.stop() }
+                    .keyboardShortcut("s", modifiers: [])
+                    .disabled(!model.isRunning)
+
+                Divider()
+
+                Button("Add Point") {
+                    Task {
+                        if let p = await OverlayPicker.shared.pick() {
+                            let idx = model.points.count + 1
+                            model.points.append(ClickPoint(name: "Point \(idx)", location: p))
+                        }
+                    }
+                }
+                .keyboardShortcut("n", modifiers: [])
+
+                Button("Clear Starting Point") { model.startingPoint = nil }
+                    .keyboardShortcut("x", modifiers: [])
+                    .disabled(model.startingPoint == nil)
+            }
+        }
 
         #if os(macOS)
         if #available(macOS 13.0, *) {
