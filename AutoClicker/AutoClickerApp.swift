@@ -3,23 +3,23 @@ import SwiftUI
 @main
 struct AutoClickerApp: App {
     @StateObject private var model: ClickerModel = ClickerModel()
+    @StateObject private var hotkeys: HotkeySettings = HotkeySettings()
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(model)
+                .environmentObject(hotkeys)
         }
         .commands {
             CommandMenu("Controls") {
-                Button("Start") { model.start() }
-                    .keyboardShortcut(.return, modifiers: [])
-
-                Button(model.isPaused ? "Resume" : "Pause") { model.togglePauseResume() }
-                    .keyboardShortcut(.space, modifiers: [])
-                    .disabled(!model.isRunning)
+                Button(model.isRunning ? (model.isPaused ? "Resume" : "Pause") : "Start") {
+                    if model.isRunning { model.togglePauseResume() } else { model.start() }
+                }
+                .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.startPauseKey), modifiers: [])
 
                 Button("Stop") { model.stop() }
-                    .keyboardShortcut("s", modifiers: [])
+                    .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.stopKey), modifiers: [])
                     .disabled(!model.isRunning)
 
                 Divider()
@@ -32,11 +32,14 @@ struct AutoClickerApp: App {
                         }
                     }
                 }
-                .keyboardShortcut("n", modifiers: [])
+                .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.addPointKey), modifiers: [])
 
                 Button("Clear Starting Point") { model.startingPoint = nil }
-                    .keyboardShortcut("x", modifiers: [])
                     .disabled(model.startingPoint == nil)
+
+                Button("Clear Points") { model.points.removeAll() }
+                    .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.clearPointsKey), modifiers: [])
+                    .disabled(model.points.isEmpty)
             }
         }
 

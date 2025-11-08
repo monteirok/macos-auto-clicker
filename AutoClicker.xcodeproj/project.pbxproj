@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9DCA40B12EBF2F0700017551 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCA40B02EBF2F0700017551 /* RootView.swift */; };
 		9DCA40B32EBF3C4800017551 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCA40B22EBF3C4300017551 /* ContentView.swift */; };
+        B1F0C0DE00000001 /* Hotkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F0C0DE00000002 /* Hotkeys.swift */; };
 		B10000012000000100BEEF01 /* AutoClickerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000002000000100BEEF01 /* AutoClickerApp.swift */; };
 		B10000052000000100BEEF01 /* ClickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000042000000100BEEF01 /* ClickerModel.swift */; };
 		B10000072000000100BEEF01 /* AccessibilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000062000000100BEEF01 /* AccessibilityHelper.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		9DCA40B02EBF2F0700017551 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9DCA40B22EBF3C4300017551 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+        B1F0C0DE00000002 /* Hotkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotkeys.swift; sourceTree = "<group>"; };
 		B10000002000000100BEEF01 /* AutoClickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoClickerApp.swift; sourceTree = "<group>"; };
 		B10000042000000100BEEF01 /* ClickerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerModel.swift; sourceTree = "<group>"; };
 		B10000062000000100BEEF01 /* AccessibilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelper.swift; sourceTree = "<group>"; };
@@ -58,14 +60,15 @@
 		B10000172000000100BEEF01 /* AutoClicker */ = {
 			isa = PBXGroup;
 			children = (
-				9DCA40B22EBF3C4300017551 /* ContentView.swift */,
-				B10000002000000100BEEF01 /* AutoClickerApp.swift */,
-				B10000042000000100BEEF01 /* ClickerModel.swift */,
-				B10000062000000100BEEF01 /* AccessibilityHelper.swift */,
-				B10000082000000100BEEF01 /* OverlayPicker.swift */,
-				B100000A2000000100BEEF01 /* Assets.xcassets */,
-				B100000C2000000100BEEF01 /* Info.plist */,
-				9DCA40B02EBF2F0700017551 /* RootView.swift */,
+                9DCA40B22EBF3C4300017551 /* ContentView.swift */,
+                B10000002000000100BEEF01 /* AutoClickerApp.swift */,
+                B10000042000000100BEEF01 /* ClickerModel.swift */,
+                B10000062000000100BEEF01 /* AccessibilityHelper.swift */,
+                B10000082000000100BEEF01 /* OverlayPicker.swift */,
+                B100000A2000000100BEEF01 /* Assets.xcassets */,
+                B100000C2000000100BEEF01 /* Info.plist */,
+                9DCA40B02EBF2F0700017551 /* RootView.swift */,
+                B1F0C0DE00000002 /* Hotkeys.swift */,
 			);
 			path = AutoClicker;
 			sourceTree = "<group>";
@@ -139,14 +142,15 @@
 		B10000112000000100BEEF01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (
-				B10000012000000100BEEF01 /* AutoClickerApp.swift in Sources */,
-				9DCA40B32EBF3C4800017551 /* ContentView.swift in Sources */,
-				B10000052000000100BEEF01 /* ClickerModel.swift in Sources */,
-				9DCA40B12EBF2F0700017551 /* RootView.swift in Sources */,
-				B10000072000000100BEEF01 /* AccessibilityHelper.swift in Sources */,
-				B10000092000000100BEEF01 /* OverlayPicker.swift in Sources */,
-			);
+            files = (
+                B10000012000000100BEEF01 /* AutoClickerApp.swift in Sources */,
+                9DCA40B32EBF3C4800017551 /* ContentView.swift in Sources */,
+                B10000052000000100BEEF01 /* ClickerModel.swift in Sources */,
+                9DCA40B12EBF2F0700017551 /* RootView.swift in Sources */,
+                B10000072000000100BEEF01 /* AccessibilityHelper.swift in Sources */,
+                B10000092000000100BEEF01 /* OverlayPicker.swift in Sources */,
+                B1F0C0DE00000001 /* Hotkeys.swift in Sources */,
+            );
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */

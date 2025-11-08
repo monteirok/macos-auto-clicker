@@ -4,8 +4,11 @@ import AppKit
 // Refactored "Liquid Glass" UI wired to ClickerModel.
 struct RootView: View {
     @EnvironmentObject var model: ClickerModel
+    @EnvironmentObject var hotkeys: HotkeySettings
     @State private var localMonitor: Any? = nil
     @State private var globalMonitor: Any? = nil
+    @State private var confirmClearStart: Bool = false
+    @State private var tab: Int = 0 // 0 = Clicks, 1 = Settings
 
     var body: some View {
         ZStack {
@@ -15,8 +18,10 @@ struct RootView: View {
 
             VStack(alignment: .leading, spacing: 18) {
                 header
+                glassTabBar
 
                 // Controls Row
+                if tab == 0 {
                 GlassContainer {
                     HStack(spacing: 14) {
                         NumberInput(title: "Delay (s)", value: $model.delay, step: 0.1)
@@ -30,19 +35,20 @@ struct RootView: View {
                             step: 1
                         )
 
-                        Toggle("Warp Cursor to Target", isOn: $model.warpCursor)
-                            .toggleStyle(GlassToggleStyle())
+                        // Toggle removed per design update
 
                         Spacer()
 
                         HStack(spacing: 10) {
                             Button("Add Point") {
+                                resignFirstResponder()
                                 Task { await addPointViaOverlay() }
                             }
                             .buttonStyle(GlassButtonStyle())
-                            .keyboardShortcut("n", modifiers: [])
+                            .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.addPointKey), modifiers: [])
 
                             Button(model.isRunning ? (model.isPaused ? "Resume" : "Pause") : "Start") {
+                                resignFirstResponder()
                                 if model.isRunning {
                                     model.togglePauseResume()
                                 } else {
@@ -50,11 +56,12 @@ struct RootView: View {
                                 }
                             }
                             .buttonStyle(GlassButtonStyle(prominent: true))
+                            .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.startPauseKey), modifiers: [])
 
-                            Button("Stop") { model.stop() }
+                            Button("Stop") { resignFirstResponder(); model.stop() }
                                 .buttonStyle(GlassButtonStyle())
                                 .disabled(!model.isRunning)
-                                .keyboardShortcut(.delete, modifiers: [])
+                                .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.stopKey), modifiers: [])
                         }
                     }
                 }
@@ -73,14 +80,15 @@ struct RootView: View {
                             .font(.callout)
                         Spacer()
                         Button(model.startingPoint == nil ? "Set Starting Point" : "Replace Starting Point") {
+                            resignFirstResponder()
                             Task { await setStartingPointViaOverlay() }
                         }
                         .buttonStyle(GlassButtonStyle())
 
-                        Button("Clear") { model.startingPoint = nil }
-                            .buttonStyle(GlassButtonStyle())
-                            .disabled(model.startingPoint == nil)
-                            .keyboardShortcut("x", modifiers: [])
+                        Button("Clear") { confirmClearStart = true }
+                        .buttonStyle(GlassButtonStyle())
+                        .disabled(model.startingPoint == nil)
+                        // Removed hotkey from Clear Starting Point per design
                     }
                 }
 
@@ -89,9 +97,10 @@ struct RootView: View {
                     VStack(spacing: 10) {
                         HStack {
                             Spacer()
-                            Button("Clear Points") { model.points.removeAll() }
+                            Button("Clear Points") { resignFirstResponder(); model.points.removeAll() }
                                 .buttonStyle(GlassButtonStyle())
                                 .disabled(model.points.isEmpty)
+                                .keyboardShortcut(hotkeys.keyEquivalent(for: hotkeys.clearPointsKey), modifiers: [])
                         }
                         ForEach(Array(model.points.enumerated()), id: \.element.id) { idx, point in
                             HStack(spacing: 12) {
@@ -130,6 +139,10 @@ struct RootView: View {
                     .onTapGesture { model.recheckAccessibility(promptIfNeeded: true) }
                 }
                 .padding(.horizontal, 4)
+            } else {
+                // Settings Tab
+                HotkeysSettingsView()
+            }
             }
             .padding(24)
             .onAppear {
@@ -137,16 +150,41 @@ struct RootView: View {
                 // Install key monitors to stop with Delete while running
                 if localMonitor == nil {
                     localMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
-                        if model.isRunning && (event.keyCode == 51 || event.keyCode == 117) { // delete / forward delete
+                        if model.isRunning && hotkeys.isStop(event: event) {
                             DispatchQueue.main.async { model.stop() }
                             return nil // consume
+                        }
+                        // Add Point when not typing
+                        if hotkeys.isAddPoint(event: event) {
+                            if let responder = NSApp.keyWindow?.firstResponder, responder.isKind(of: NSTextView.self) {
+                                return event // let text editing proceed
+                            }
+                            DispatchQueue.main.async {
+                                Task { await addPointViaOverlay() }
+                            }
+                            return nil
+                        }
+                        // Clear points
+                        if hotkeys.isClearPoints(event: event) {
+                            if let responder = NSApp.keyWindow?.firstResponder, responder.isKind(of: NSTextView.self) {
+                                return event
+                            }
+                            DispatchQueue.main.async { model.points.removeAll() }
+                            return nil
+                        }
+                        // Start/Pause
+                        if hotkeys.isStartPause(event: event) {
+                            DispatchQueue.main.async {
+                                model.isRunning ? model.togglePauseResume() : model.start()
+                            }
+                            return nil
                         }
                         return event
                     }
                 }
                 if globalMonitor == nil {
                     globalMonitor = NSEvent.addGlobalMonitorForEvents(matching: .keyDown) { event in
-                        if model.isRunning && (event.keyCode == 51 || event.keyCode == 117) {
+                        if model.isRunning && hotkeys.isStop(event: event) {
                             DispatchQueue.main.async { model.stop() }
                         }
                     }
@@ -156,8 +194,22 @@ struct RootView: View {
                 if let m = localMonitor { NSEvent.removeMonitor(m); localMonitor = nil }
                 if let m = globalMonitor { NSEvent.removeMonitor(m); globalMonitor = nil }
             }
+            // Clicking anywhere outside text fields ends editing so hotkeys work
+            .contentShape(Rectangle())
+            .onTapGesture { resignFirstResponder() }
+            // Confirm clear starting point
+            .alert("Clear Starting Point?", isPresented: $confirmClearStart) {
+                Button("Cancel", role: .cancel) {}
+                Button("Clear", role: .destructive) { model.startingPoint = nil }
+            } message: {
+                Text("This removes the saved starting point.")
+            }
         }
         .frame(minWidth: 880, minHeight: 520)
+    }
+
+    private func resignFirstResponder() {
+        NSApp.keyWindow?.makeFirstResponder(nil)
     }
 
     // MARK: - Header
@@ -165,7 +217,7 @@ struct RootView: View {
         HStack(alignment: .center) {
             VStack(alignment: .leading, spacing: 2) {
                 Text("Auto Clicker").font(.system(size: 24, weight: .bold))
-                Text("macOS 26 – Liquid Glass").font(.callout).foregroundStyle(LG.secondary)
+                // Subtitle removed per design update
             }
             Spacer()
             StatusPill(
@@ -173,6 +225,16 @@ struct RootView: View {
                 color: model.accessibilityGranted ? .green : .orange
             )
             .onTapGesture { model.recheckAccessibility(promptIfNeeded: true) }
+        }
+    }
+
+    // MARK: - Glass Tab Bar
+    private var glassTabBar: some View {
+        HStack(spacing: 8) {
+            Button("Clicks") { tab = 0 }
+                .buttonStyle(GlassButtonStyle(prominent: tab == 0))
+            Button("Settings") { tab = 1 }
+                .buttonStyle(GlassButtonStyle(prominent: tab == 1))
         }
     }
 
