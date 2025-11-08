@@ -1,0 +1,69 @@
+{
+  "" : {
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClicker-primary.dia",
+    "emit-module-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClicker-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClicker-primary-emit-module.dia",
+    "pch" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClicker-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClicker-primary.swiftdeps"
+  },
+  "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/AutoClicker/AccessibilityHelper.swift" : {
+    "const-values" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.swiftconstvalues",
+    "dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.d",
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.dia",
+    "index-unit-output-path" : "/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.o",
+    "llvm-bc" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.bc",
+    "object" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.o",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper.swiftdeps",
+    "swiftmodule" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AccessibilityHelper~partial.swiftmodule"
+  },
+  "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/AutoClicker/AutoClickerApp.swift" : {
+    "const-values" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.swiftconstvalues",
+    "dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.d",
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.dia",
+    "index-unit-output-path" : "/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.o",
+    "llvm-bc" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.bc",
+    "object" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.o",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp.swiftdeps",
+    "swiftmodule" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/AutoClickerApp~partial.swiftmodule"
+  },
+  "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/AutoClicker/ClickerModel.swift" : {
+    "const-values" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.swiftconstvalues",
+    "dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.d",
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.dia",
+    "index-unit-output-path" : "/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.o",
+    "llvm-bc" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.bc",
+    "object" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.o",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel.swiftdeps",
+    "swiftmodule" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ClickerModel~partial.swiftmodule"
+  },
+  "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/AutoClicker/ContentView.swift" : {
+    "const-values" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.swiftconstvalues",
+    "dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.d",
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.dia",
+    "index-unit-output-path" : "/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.o",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView.swiftdeps",
+    "swiftmodule" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/ContentView~partial.swiftmodule"
+  },
+  "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/AutoClicker/OverlayPicker.swift" : {
+    "const-values" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.swiftconstvalues",
+    "dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.d",
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.dia",
+    "index-unit-output-path" : "/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.o",
+    "llvm-bc" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.bc",
+    "object" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.o",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker.swiftdeps",
+    "swiftmodule" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/OverlayPicker~partial.swiftmodule"
+  },
+  "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/AutoClicker.build/Debug/AutoClicker.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

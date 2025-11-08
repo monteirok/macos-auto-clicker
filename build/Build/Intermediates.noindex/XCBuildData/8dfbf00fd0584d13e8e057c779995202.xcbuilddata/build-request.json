@@ -1,0 +1,63 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "58beed1f8ba9a99c3be950dad86d3ca0817e8109f3b8cc0b01fc85ddc2658324"
+    }
+  ],
+  "containerPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/AutoClicker.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx26.0",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Products",
+      "derivedDataPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build",
+      "indexDataStoreFolderPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/karstenmonteiro/Dev/SwiftUI/AutoClicker/build/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "CODE_SIGNING_ALLOWED" : "NO"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'AutoClicker' in project 'AutoClicker' (no dependencies)
